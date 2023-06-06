@@ -1,0 +1,16 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Spline Sans', Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    color: saddlebrown;
+    background-color: aliceblue;
+}
+
+header {
+    color:azure;
+    font-family: 'Climate Crisis',Cambria, Cochin, Georgia, Times, 'Times New Roman', cursive;
+    background-image: linear-gradient(to right, brown, cyan);
+}
