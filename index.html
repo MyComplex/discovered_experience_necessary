@@ -8,27 +8,57 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/normalize.css@8.0.1/normalize.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Spline+Sans&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"
-        integrity="sha256-eZrrJcwDc/3uDhsdt61sL2oOBY362qM3lon1gyExkL0=" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css"
-        crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Climate+Crisis&family=Spline+Sans&family=Play&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.7.5/dist/css/foundation.min.css" crossorigin="anonymous">
     <link rel="stylesheet" href="./assets/css/style.css">
     <title>Weather Forecast Dashboard</title>
 </head>
 
 <body>
-    <header>
+    <div class="hero-full-screen">
+
+        <div class="top-content-section">
+            <div class="top-bar">
+                <div class="top-bar-left">
+                    <ul class="menu">
+                        <li class="menu-text"><img src="https://placehold.it/75x30" alt="logo"></li>
+                        <li><a href="#">One</a></li>
+                        <li><a href="#">Two</a></li>
+                        <li><a href="#">Three</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="middle-content-section">
+            <h1>Weather Dashboard Confessional</h1>
+            <p>When embarking on a journey and hoping to steer clear of unfavorable weather conditions, take a cue from the melodies of Dashboard Confessional. Fight "The Good Fight" and equip yourself with adequate knowledge about your destination's climate. The best advice "Hands Down" is to check weather forecasts beforehand, making sure you don't end up at one of "The Places You Have Come to Fear the Most" and ensuring you're well-prepared to avoid any "Disruptive Patterns" caused by inclement weather, or you may find yourself "Screaming Infidelities" at gloomy skies and having your sweet respite "Stolen." Should a storm arise, find refuge in "The Shade of Poison Trees" or "The Best Deceptions" of indoor attractions. Search below, pack your bags and embrace the "Warmth of the Sand" as you chase "A Plain Morning" with clear blue skies.</p>
+            <h3>Enter the city and state.</h3>
+            <div class="input-group input-group-rounded">
+                <input class="input-group-field" type="search" value="Carson City, NV">
+                <div class="input-group-button">
+                    <input type="submit" class="button secondary" value="Search">
+                </div>
+            </div>
+        </div>
+
+        <div class="bottom-content-section" data-magellan data-threshold="0">
+            <a href="#main-content-section"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                    <path d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12 12-5.373 12-12zm-18.005-1.568l1.415-1.414 4.59 4.574 4.579-4.574 1.416 1.414-5.995 5.988-6.005-5.988z" />
+                </svg></a>
+        </div>
+
+    </div>
+
+    <div id="main-content-section" data-magellan-target="main-content-section">
+        <!-- your content goes here -->
+    </div>
+
+
+    <!-- <header>
         <h1>Weather Dashboard</h1>
     </header>
     <main>
-        <div class="input-group input-group-rounded">
-            <input class="input-group-field" type="search" value="Carson City, NV">
-            <div class="input-group-button">
-                <input type="submit" class="button secondary" value="Search">
-            </div>
-        </div>
         <div id="current"></div>
         <div id="forecast"></div>
     </main>
@@ -46,9 +76,7 @@
             </ul>
         </div>
         <h6>© 2023 | Pligeaux Findenmösle</h6>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.0/dist/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/jqueryui@1.11.1/jquery-ui.min.js"></script>
+    </footer> -->
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.8/dayjs.min.js"></script>
     <script type="text/javascript" src="./assets/scripts/script.js"></script>
 </body>
