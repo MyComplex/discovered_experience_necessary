@@ -1,24 +1,20 @@
+var key = '20725f67b8ffb04ef043c4fc06daecdd';
 var form = document.querySelector('.input-group');
 
 function formSubmit(event) {
-  event.preventDefault();
+    event.preventDefault();
 
-  var inputValue = document.querySelector('.input-group-field').value;
-  console.log(inputValue);
-  var city = inputValue.substring(0,inputValue.indexOf(','));
-  console.log(city);
-  var state = inputValue.split(', ')[1];
-  console.log(state);
+    var city = document.querySelector('.input-group-field').value;
 
-  if (!inputValue) {
-    console.error('Entering the city and state is required.');
-    return;
-  }
+    if (!city) {
+        console.error('Entering the city is required.');
+        return;
+    }
 
-  var query = `You have entered ${city} and ${state} for your search request`;
-  console.log(query);
+    var query = `https://api.openweathermap.org/data/2.5/weather?q=${encodeURIComponent(city)}&appid=${key}`;
+    console.log(query);
 
-//   location.assign(query);
+    //   location.assign(query);
 }
 
 form.addEventListener('submit', formSubmit);
