@@ -19,13 +19,18 @@ function formSubmit(event) {
 
 form.addEventListener('submit', formSubmit);
 
-var datetime = dayjs().format('dddd, MMMM d, YYYY h:mm:ss A');
-console.log(datetime);
+const datetime = dayjs().format('dddd, MMMM d, YYYY h:mm:ss A');
 document.getElementById("time").textContent = datetime;
 
 function refreshTime() {
     const timeDisplay = document.getElementById("time");
-    const dateString = dayjs().format('dddd, MMMM d, YYYY h:mm:ss A');
+    const dateString = dayjs().format('dddd, MMMM D, YYYY h:mm:ss A');
     timeDisplay.textContent = dateString;
 }
 setInterval(refreshTime, 1000);
+
+const d1 = dayjs().add(1, 'day').format('ddd, MMM D');
+const d2 = dayjs().add(2, 'day').format('ddd, MMM D');
+const d3 = dayjs().add(3, 'day').format('ddd, MMM D');
+const d4 = dayjs().add(4, 'day').format('ddd, MMM D');
+const d5 = dayjs().add(5, 'day').format('ddd, MMM D');

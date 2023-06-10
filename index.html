@@ -17,7 +17,7 @@
         <h1>Destination Weather Forecast</h1>
     </header>
     <main>
-        <div class="input-container">
+        <section class="input-container">
             <form id="search">
                 <fieldset>
                     <legend>Enter Your Destination</legend>
@@ -26,19 +26,96 @@
                 </fieldset>
             </form>
             <h5><span id="time"> </span></h5>
-        </div>
-        <aside id="history">
-            <h4>Search History</h4>
-            <ul>
-                <li><button>Carson City</button></li>
-                <li><button>Las Vegas</button></li>
-                <li><button>Reno</button></li>
-                <li><button>South Tahoe</button></li>
-            </ul>
-        </aside>
-        <section id="current">
         </section>
-        <section id="forecast">
+        <section id="hero">
+            <aside id="history">
+                <h4>Search History</h4>
+                <ul id="histcont">
+                    <li><button>Carson City</button></li>
+                    <li><button>Las Vegas</button></li>
+                    <li><button>Reno</button></li>
+                    <li><button>South Tahoe</button></li>
+                </ul>
+            </aside>
+            <div class="dashboard">
+                <section id="current" class="now">
+                    <h2 class="now-title">Carson City, NV</h2>
+                    <div class="now-temp">
+                        <h3>Temp 43°F</h3>
+                        <img src="#">
+                    </div>
+                    <h5 class="now-climate"><span>Feels like 59°F</span> : <span>Broken clouds</span> : <span>Light air</span></h5>
+                    <ul class="now-wind-humidity">
+                        <li>Wind: 1MPH N</li>
+                        <li>Humidity: 52%</li>
+                    </ul>
+                </section>
+                <div class="five-up">
+                    <h2 class="forecast-title">5-day Forecast</h2>
+                    <section class="right" id="forecast">
+                        <div class="forecast-day">
+                            <div class="forecast-day-temp">
+                                <h3>Date</h3>
+                                <img src="#">
+                            </div>
+                            <h5 class="d1-climate"><span>Scattered clouds : Moderate breeze</span></h5>
+                            <h4 class="d1-hl"><span>High 72°F</span> : <span>Low 53°F</span></h4>
+                            <ul class="forecast-wind-humidity">
+                                <li>Wind: 15MPH W</li>
+                                <li>Humidity: 35%</li>
+                            </ul>
+                        </div>
+                        <div class="forecast-day">
+                            <div class="forecast-day-temp">
+                                <h3>Date</h3>
+                                <img src="#">
+                            </div>
+                            <h5 class="d1-climate"><span>Scattered clouds : Moderate breeze</span></h5>
+                            <h4 class="d1-hl"><span>High 72°F</span> : <span>Low 53°F</span></h4>
+                            <ul class="forecast-wind-humidity">
+                                <li>Wind: 15MPH W</li>
+                                <li>Humidity: 35%</li>
+                            </ul>
+                        </div>
+                        <div class="forecast-day">
+                            <div class="forecast-day-temp">
+                                <h3>Date</h3>
+                                <img src="#">
+                            </div>
+                            <h5 class="d1-climate"><span>Scattered clouds : Moderate breeze</span></h5>
+                            <h4 class="d1-hl"><span>High 72°F</span> : <span>Low 53°F</span></h4>
+                            <ul class="forecast-wind-humidity">
+                                <li>Wind: 15MPH W</li>
+                                <li>Humidity: 35%</li>
+                            </ul>
+                        </div>
+                        <div class="forecast-day">
+                            <div class="forecast-day-temp">
+                                <h3>Date</h3>
+                                <img src="#">
+                            </div>
+                            <h5 class="d1-climate"><span>Scattered clouds : Moderate breeze</span></h5>
+                            <h4 class="d1-hl"><span>High 72°F</span> : <span>Low 53°F</span></h4>
+                            <ul class="forecast-wind-humidity">
+                                <li>Wind: 15MPH W</li>
+                                <li>Humidity: 35%</li>
+                            </ul>
+                        </div>
+                        <div class="forecast-day">
+                            <div class="forecast-day-temp">
+                                <h3>Date</h3>
+                                <img src="#">
+                            </div>
+                            <h5 class="d1-climate"><span>Scattered clouds : Moderate breeze</span></h5>
+                            <h4 class="d1-hl"><span>High 72°F</span> : <span>Low 53°F</span></h4>
+                            <ul class="forecast-wind-humidity">
+                                <li>Wind: 15MPH W</li>
+                                <li>Humidity: 35%</li>
+                            </ul>
+                        </div>
+                    </section>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
