@@ -21,7 +21,7 @@
             <form id="search">
                 <fieldset>
                     <legend>Enter Your Destination</legend>
-                    <input id="input" type="search" value="Carson City">
+                    <input id="input" type="search">
                     <button>Search</button>
                 </fieldset>
             </form>
@@ -31,10 +31,6 @@
             <aside id="history">
                 <h4>Search History</h4>
                 <ul id="histcont">
-                    <li><button>Carson City</button></li>
-                    <li><button>Las Vegas</button></li>
-                    <li><button>Reno</button></li>
-                    <li><button>South Tahoe</button></li>
                 </ul>
             </aside>
             <div class="dashboard">
@@ -42,7 +38,7 @@
                     <h2 class="now-title">Carson City, NV</h2>
                     <div class="now-temp">
                         <h3>Temp 43°F</h3>
-                        <img src="#">
+                        <img src="https://openweathermap.org/img/w/10d.png">
                     </div>
                     <h5 class="now-climate"><span>Feels like 59°F</span> : <span>Broken clouds</span> : <span>Light air</span></h5>
                     <ul class="now-wind-humidity">
@@ -123,6 +119,14 @@
             <img src="./assets/images/flag.png">
         </section>
     </footer>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <p id="errorText"></p>
+            <span class="close">&times;</span>
+        </div>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/convert@4.13.0/dist/convert.prod.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.8/dayjs.min.js"></script>
     <script type="text/javascript" src="./assets/scripts/script.js"></script>
