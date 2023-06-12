@@ -1,1 +1,240 @@
-/* Changing over to code I wrote offline because this became too much */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: brown;
+    color: aliceblue;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    background-color: aqua;
+    color: black;
+    /* width: 100%; */
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: .3rem; */
+}
+
+form fieldset {
+    border: none;
+}
+
+main {
+    display: flex;
+    background-color: chocolate;
+    color: aquamarine;
+    width: 100%;
+    height: 70vh;
+}
+
+aside {
+    background-color: bisque;
+    color: darkgreen;
+    width: 20vw;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+aside div {
+    display: flex;
+    flex-direction: column;
+}
+
+article {
+    /* background-color: blueviolet; */
+    background: url(./background.jpg);
+    background-size: cover;
+    color: darkkhaki;
+    width: 80vw;
+    height: 70vh;
+}
+
+/* section {
+    background-color: indigo;
+    color: chartreuse;
+    width: 80vw;
+    height: auto;
+    padding: 1rem;
+} */
+
+#current-section {
+    display: none;
+    border: 1px solid black;
+    padding: .5rem;
+    margin: .5rem;
+    background-color: white;
+    color: black;
+}
+
+#forecast-section {
+    display: none;
+    border: 1px solid black;
+    padding: .5rem;
+    margin: .5rem;
+    background-color: white;
+    color: black;
+}
+
+#current-container {
+    /* display: none; */
+    /* border: 1px solid black; */
+    padding: .5rem;
+    margin: .5rem;
+    /* background-color: white; */
+    /* color: black; */
+}
+
+#current-top {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    background-color: white;
+    color: black;
+    font-size: 2rem;
+}
+
+#current-icon {
+    display: flex;
+    justify-content: center;
+    margin-right: .5rem;
+}
+
+#current-top img {
+    /* border: 1px solid black; */
+    background-color: skyblue;
+}
+
+#forecast-container img {
+    /* border: 1px solid black; */
+    background-color: skyblue;
+}
+
+#current-bottom {
+    display: flex;
+    justify-content: center;
+    background-color: white;
+    color: black;
+}
+
+#current-bottom div {
+    margin: .5rem;
+}
+
+article section h2 {
+    text-align: center;
+}
+
+#time {
+    text-align: center;
+    padding: .3rem;
+}
+
+article section ul {
+    list-style: none;
+}
+
+#forecast-container {
+    display: flex;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    padding: .5rem;
+    margin: .5rem;
+    background-color: white;
+    color: black;
+
+}
+
+#forecast-container div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+footer {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    background-color: cornflowerblue;
+    color: crimson;
+    width: 100%;
+    height: 10vh;
+}
+
+footer div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 1rem;
+}
+
+footer div super {
+    font-size: xx-small;
+}
+
+footer img {
+    margin-right: 1rem;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: red;
+    background-color: salmon;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: black;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: gray;
+    text-decoration: none;
+    cursor: pointer;
+}

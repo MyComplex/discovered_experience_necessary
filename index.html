@@ -1,1 +1,61 @@
-<!-- Changing over to code I wrote offline because this became too much -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard Scratch</title>
+    <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Weather Dashboard</h1>
+        <p id="time"></p>
+    </header>
+    <form>
+        <fieldset>
+            <label for="search">Search for City:</label>
+            <input id="search" type="text">
+            <button type="button" id="submit">Search</button>
+        </fieldset>
+    </form>
+    <main>
+        <aside id="search-history">
+            <h2>History</h2>
+            <div id="history-container">
+            </div>
+        </aside>
+        <article id="dashboard">
+            <section id="current-section">
+                <h2>Current Weather</h2>
+                <div id="current-container">
+                </div>
+            </section>
+            <section id="forecast-section">
+                <h2>5-day Forecast</h2>
+                <div id="forecast-container">
+                </div>
+            </section>
+        </article>
+    </main>
+    <footer>
+        <div>
+            <h3>Made in the USA*</h3>
+            <super>*with foreign and domestic code</super>
+        </div>
+        <img src="./assets/flag.png" alt="'Murica!">
+    </footer>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+        <!-- Modal content -->
+        <div class="modal-content">
+            <p id="errorText"></p>
+            <span class="close">&times;</span>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.8/dayjs.min.js"></script>
+    <script type="text/javascript" src="./assets/script.js"></script>
+</body>
+
+</html>
