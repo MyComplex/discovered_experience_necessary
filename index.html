@@ -22,7 +22,7 @@
                 <fieldset>
                     <legend>Enter Your Destination</legend>
                     <input id="input" type="search">
-                    <button>Search</button>
+                    <button id="submit">Search</button>
                 </fieldset>
             </form>
             <h5><span id="time"> </span></h5>
@@ -35,15 +35,14 @@
             </aside>
             <div class="dashboard">
                 <section id="current" class="now">
-                    <h2 class="now-title">Carson City, NV</h2>
+                    <h2 id="nowTitle" class="now-title"></h2>
                     <div class="now-temp">
-                        <h3>Temp 43°F</h3>
-                        <img src="https://openweathermap.org/img/w/10d.png">
+                        <h3 id="nowTemp"></h3>
+                        <img id="nowIcon" alt="Current weather icon" src="">
                     </div>
-                    <h5 class="now-climate"><span>Feels like 59°F</span> : <span>Broken clouds</span> : <span>Light air</span></h5>
                     <ul class="now-wind-humidity">
-                        <li>Wind: 1MPH N</li>
-                        <li>Humidity: 52%</li>
+                        <li id="nowWind"></li>
+                        <li id="nowHumidity"></li>
                     </ul>
                 </section>
                 <div class="five-up">

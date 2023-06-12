@@ -120,7 +120,7 @@ aside ul li button {
 }
 
 #current {
-    display: block;
+    display: none;
 }
 
 footer {
