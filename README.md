@@ -4,7 +4,7 @@
 - [Scope of Work](#scope-of-work)
 - [Sample](#sample)
 - [Live Website](#live-website)
-- [Copyright](#copyright)
+- [Inspiration](#copyright)
 
 ## Scope of Work
 Once upon a time, in a small town called Techville, there lived a mediocre old programmer named Pligeaux Findenmösle. Pligeaux had a deep passion for coding and longed to create innovative applications that could make people's lives easier. One day, as Pligeaux was sipping a cup of coffee at a local café, an idea struck their mind—a weather forecast dashboard app!
