@@ -1,49 +1,89 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: 'Martian Mono', monospace;
+}
+
+body {
+    background-color: cadetblue;
+    /* overflow: hidden; */
 }
 
 header {
-    background-color: brown;
-    color: aliceblue;
-    width: 100%;
-    height: 10vh;
     display: flex;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    background-color: firebrick;
+    color: azure;
+    max-height: 10vh;
+    min-height: 10vh;
 }
 
 form {
-    background-color: aqua;
+    background-color: transparent;
     color: black;
-    /* width: 100%; */
-    height: 10vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    /* padding: .3rem; */
+    border-bottom: 1px solid cyan;
+    width: 100%;
+    max-height: 10vh;
+    min-height: 10vh;
 }
 
-form fieldset {
+
+fieldset {
     border: none;
+}
+
+fieldset legend {
+    margin-bottom: .3rem;
+}
+
+fieldset input {
+    border: none;
+    min-height: 30px;
+    min-width: 200px;
+}
+
+fieldset button {
+    background-color: green;
+    border: none;
+    color: aliceblue;
+    min-height: 30px;
+    padding: 5px;
+    margin-right: 0;
+    min-width: 80px;
 }
 
 main {
     display: flex;
-    background-color: chocolate;
     color: aquamarine;
     width: 100%;
-    height: 70vh;
+    min-height: 70vh;
+    max-height: 70vh;
 }
 
 aside {
-    background-color: bisque;
-    color: darkgreen;
-    width: 20vw;
-    height: 70vh;
     display: flex;
+    background-color: transparent;
     flex-direction: column;
     align-items: center;
+    width: 20vw;
+    min-height: 70vh;
+    max-height: 70vh;
+    border-right: 2px solid fuchsia;
+}
+
+aside h4 {
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    background-color: cornflowerblue;
+    color: brown;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    min-width: auto;
 }
 
 aside div {
@@ -51,22 +91,25 @@ aside div {
     flex-direction: column;
 }
 
+aside button {
+    background-color: chocolate;
+    color: azure;
+    padding: 5px;
+    margin: 0.25rem;
+    min-width: 100%;
+    min-height: 30px;
+    border: none;
+    border-radius: 7px;
+}
+
 article {
-    /* background-color: blueviolet; */
-    background: url(./background.jpg);
+    /* background: url(../images/background.jpg); */
     background-size: cover;
     color: darkkhaki;
     width: 80vw;
-    height: 70vh;
+    min-height: 70vh;
+    max-height: 70vh;
 }
-
-/* section {
-    background-color: indigo;
-    color: chartreuse;
-    width: 80vw;
-    height: auto;
-    padding: 1rem;
-} */
 
 #current-section {
     display: none;
@@ -87,19 +130,14 @@ article {
 }
 
 #current-container {
-    /* display: none; */
-    /* border: 1px solid black; */
     padding: .5rem;
     margin: .5rem;
-    /* background-color: white; */
-    /* color: black; */
 }
 
 #current-top {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 1rem;
     background-color: white;
     color: black;
     font-size: 2rem;
@@ -112,12 +150,10 @@ article {
 }
 
 #current-top img {
-    /* border: 1px solid black; */
     background-color: skyblue;
 }
 
 #forecast-container img {
-    /* border: 1px solid black; */
     background-color: skyblue;
 }
 
@@ -138,7 +174,6 @@ article section h2 {
 
 #time {
     text-align: center;
-    padding: .3rem;
 }
 
 article section ul {
@@ -148,12 +183,9 @@ article section ul {
 #forecast-container {
     display: flex;
     justify-content: space-between;
-    /* border: 1px solid black; */
-    padding: .5rem;
     margin: .5rem;
     background-color: white;
     color: black;
-
 }
 
 #forecast-container div {
@@ -166,10 +198,12 @@ footer {
     display: flex;
     justify-content: end;
     align-items: center;
-    background-color: cornflowerblue;
+    background-color: darkcyan;
     color: crimson;
     width: 100%;
-    height: 10vh;
+    max-height: 10vh;
+    min-height: 10vh;
+    position: absolute;
 }
 
 footer div {
@@ -179,37 +213,40 @@ footer div {
     margin-right: 1rem;
 }
 
+footer div h3 {
+
+    color: gold;
+
+    font-weight: 400;
+}
+
+footer div h3 super {
+    font-size: xx-small;
+    position: absolute;
+}
+
 footer div super {
     font-size: xx-small;
+    color: cadetblue;
 }
 
 footer img {
     margin-right: 1rem;
 }
 
-/* The Modal (background) */
 .modal {
     display: none;
-    /* Hidden by default */
     position: fixed;
-    /* Stay in place */
     z-index: 1;
-    /* Sit on top */
     left: 0;
     top: 0;
     width: 100%;
-    /* Full width */
     height: 100%;
-    /* Full height */
     overflow: auto;
-    /* Enable scroll if needed */
     background-color: rgb(0, 0, 0);
-    /* Fallback color */
     background-color: rgba(0, 0, 0, 0.4);
-    /* Black w/ opacity */
 }
 
-/* Modal Content/Box */
 .modal-content {
     display: flex;
     align-items: center;
@@ -217,14 +254,11 @@ footer img {
     color: red;
     background-color: salmon;
     margin: 15% auto;
-    /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%;
-    /* Could be more or less, depending on screen size */
 }
 
-/* The Close Button */
 .close {
     color: black;
     float: right;

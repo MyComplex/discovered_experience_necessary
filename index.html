@@ -5,24 +5,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather Dashboard Scratch</title>
-    <link rel="stylesheet" href="./assets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Martian+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
     <header>
-        <h1>Weather Dashboard</h1>
-        <p id="time"></p>
+        <h1>Destination Weather Dashboard</h1>
     </header>
     <form>
         <fieldset>
-            <label for="search">Search for City:</label>
+            <legend for="search">Search for City:</legend>
             <input id="search" type="text">
             <button type="button" id="submit">Search</button>
         </fieldset>
+        <h4 id="time"></h4>
     </form>
     <main>
         <aside id="search-history">
-            <h2>History</h2>
+            <h4>Search History</h4>
             <div id="history-container">
             </div>
         </aside>
@@ -41,21 +44,20 @@
     </main>
     <footer>
         <div>
-            <h3>Made in the USA*</h3>
+            <h3>Made in the USA<super>*</super>
+            </h3>
             <super>*with foreign and domestic code</super>
         </div>
-        <img src="./assets/flag.png" alt="'Murica!">
+        <img src="./assets/images/flag.png" alt="'Murica!">
     </footer>
-    <!-- The Modal -->
     <div id="myModal" class="modal">
-        <!-- Modal content -->
         <div class="modal-content">
             <p id="errorText"></p>
             <span class="close">&times;</span>
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/dayjs@1.11.8/dayjs.min.js"></script>
-    <script type="text/javascript" src="./assets/script.js"></script>
+    <script type="text/javascript" src="./assets/scripts/script.js"></script>
 </body>
 
 </html>

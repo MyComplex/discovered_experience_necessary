@@ -3,7 +3,6 @@ var key = '75647ee159a46bf37c329db8acbd31f1';
 var button = document.getElementById('submit');
 var historyHolder = document.getElementById('history-container');
 var historyArray = JSON.parse(localStorage.getItem("searches"));
-// console.log(historyArray);
 
 button.addEventListener("click", cityQuery);
 
@@ -31,16 +30,7 @@ function cityQuery() {
 
 renderHistory();
 
-// if (localStorage.getItem("searches") === null) {
-//     console.log('localStorage empty');
-// } else if (historyArray === null) {
-//     console.log('historyArray is null');
-// } else {
-//     renderHistory();
-// }
-// renderHistory();
-
-// var historyArray = JSON.parse(localStorage.getItem("searches"));
+var historyArray = JSON.parse(localStorage.getItem("searches"));
 
 function getCurrentWeatherData(value) {
     var currentWeatherApiUrl = 'https://api.openweathermap.org/data/2.5/weather?q=' + encodeURIComponent(value) + '&units=imperial&appid=' + key;
@@ -48,7 +38,6 @@ function getCurrentWeatherData(value) {
     fetch(currentWeatherApiUrl)
         .then(response => response.json())
         .then(data => {
-            // console.log('API response for current weather query is ', data);
             renderCurrentWeather(data);
         })
         .catch(error => {
@@ -62,7 +51,6 @@ function getForecastWeatherData(value) {
     fetch(forecastWeatherApiUrl)
         .then(response => response.json())
         .then(data => {
-            // console.log('API response for forecast weather query is ', data);
             renderForecastWeather(data);
         })
         .catch(error => {
@@ -70,15 +58,12 @@ function getForecastWeatherData(value) {
         });
 }
 
-/* Function testing */
-
 /* Render forecast card for query */
 function renderForecastWeather(forecastData) {
     var forecastSection = document.getElementById('forecast-section');
     forecastSection.style.display = 'block';
     var forecastHolder = document.getElementById('forecast-container');
     var forecastDataObject = forecastData.list;
-    // console.log(forecastDataObject);
     forecastHolder.innerHTML = '';
 
     for (let i = 1; i < forecastDataObject.length - 6; i += 8) {
@@ -111,7 +96,6 @@ function renderCurrentWeather(currentData) {
     var currentHolder = document.getElementById('current-container');
     var currentDataObject = currentData;
     currentHolder.innerHTML = '';
-    // currentHolder.style.display = 'block';
     var currentHolderTop = document.createElement('div');
     currentHolderTop.setAttribute('id', 'current-top');
     currentHolder.appendChild(currentHolderTop);
@@ -141,19 +125,22 @@ function renderCurrentWeather(currentData) {
 function renderHistory() {
     var historyArray = JSON.parse(localStorage.getItem("searches"));
     var historyHolder = document.getElementById('history-container');
-    if (historyArray.length > 1) {
-        historyHolder.innerHTML = '';
-        for (var i = 0; i < historyArray.length; i++) {
-            var element = historyArray[i];
+    if (historyArray !== null) {
+        if (historyArray.length > 1) {
+            historyHolder.innerHTML = '';
+            for (var i = 0; i < historyArray.length; i++) {
+                var element = historyArray[i];
+                var historyButtonItem = document.createElement('button');
+                historyButtonItem.setAttribute('id', element.city);
+                historyButtonItem.textContent = element.city;
+                historyHolder.appendChild(historyButtonItem);
+            }
+        } else {
             var historyButtonItem = document.createElement('button');
-            historyButtonItem.setAttribute('id', element.city);
-            historyButtonItem.textContent = element.city;
+            historyButtonItem.setAttribute('id', historyArray[0].city);
+            historyButtonItem.textContent = historyArray[0].city;
             historyHolder.appendChild(historyButtonItem);
         }
-    } else {
-        var historyButtonItem = document.createElement('button');
-        historyButtonItem.textContent = historyArray[0].city;
-        historyHolder.appendChild(historyButtonItem);
     }
 };
 
@@ -176,7 +163,6 @@ historyDiv.addEventListener('click', historyButtonClick, false);
 function historyButtonClick(event) {
     if (event.target !== event.currentTarget) {
         var clickedItem = event.target.id;
-        // console.log(clickedItem);
         getCurrentWeatherData(clickedItem);
         getForecastWeatherData(clickedItem);
     }
@@ -185,33 +171,20 @@ function historyButtonClick(event) {
 
 
 /* Modal for error handling */
-// Get the modal
 var modal = document.getElementById("myModal");
-
-// Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// When the user clicks on the button, open the modal
-// btn.onclick = function() {
 function errorModal(errorText) {
     modal.style.display = "block";
     document.getElementById('errorText').textContent = errorText;
 };
 
-// When the user clicks on <span> (x), close the modal
 span.onclick = function () {
     modal.style.display = "none";
 };
 
-// When the user clicks anywhere outside of the modal, close it
 window.onclick = function (event) {
     if (event.target == modal) {
         modal.style.display = "none";
     }
 };
-
-/* Render history if there is some */
-// if (!historyArray === null) {
-//     // var historyArray = JSON.parse(localStorage.getItem("searches"))
-//     window.addEventListener("load", renderHistory);
-// };
