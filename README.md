@@ -1,5 +1,7 @@
 # 5-Day Weather Forecast Dashboard
 
+![GitHub](https://img.shields.io/github/license/mycomplex/discovered_experience_necessary)
+
 ## Table of Contents
 - [Scope of Work](#scope-of-work)
 - [Sample](#sample)
